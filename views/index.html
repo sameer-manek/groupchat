@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head>
 	<title>Join the Forum</title>
 	<!-- link css -->
@@ -8,7 +8,7 @@
 	<!-- link scripts -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body>
+<body style="height: 100%;">
 	<header>
 		<nav class="navbar">
 			<section class="container">
@@ -27,13 +27,10 @@
 
 	<main>
 		<!-- here lies the dialogues for the forum -->
-		<section class="container" id="board"></section>
-	</main>
-
-	<footer class="footer" style="position: fixed; bottom: 0; width: 100%;"> 
-		<!-- here lies the textbox for the forum -->
+		<section class="container" id="board" style="height: 50%;"></section>
+		<div style="clear: both; height: 20px;"></div>
 		<section class="container">
-		<p><b>Share your thoughts as well:</b></p>
+			<p><b>Share your thoughts as well:</b></p>
 		<form>
 			<div class="field">
 				<textarea class="textarea" id="message" style="resize: none;" placeholder="what's on your mind?" rows="2"></textarea>
@@ -42,7 +39,7 @@
 			</div>
 		</form>
 		</section>
-	</footer>
+	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript">
 		var socket = io.connect('http://localhost:3000');
