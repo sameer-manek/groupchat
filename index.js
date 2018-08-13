@@ -13,5 +13,3 @@ io.on('connection', function(socket){
 	socket.emit("init", {msg: "io is working!"});
 	socket.on("msg", (data) => socket.broadcast.emit("new message", data))
 });
-
-

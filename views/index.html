@@ -14,7 +14,7 @@
 			<section class="container">
 				<div class="navbar-brand">
 					<a class="navbar-item" href="#">
-						<img src="https://cdn1.iconfinder.com/data/icons/material-communication/20/forum-512.png" alt="logo" /> &nbsp; Open Forum
+						<img src="https://cdn1.iconfinder.com/data/icons/material-communication/20/forum-512.png" alt="logo" /> &nbsp; Open Chat
 					</a>
 				</div>
 
@@ -50,8 +50,12 @@
 			let data = {
 				msg: $("#message").val()
 			}
-			msg: $("#message").val('')
+			
 			socket.emit('msg', data)
+			// render the message on the screen of the user
+			let msg = '<sction class="message is-info"><div class="message-body"><b>You</b><p>'+$("#message").val()+'</p>';
+			$("#board").append(msg);
+			msg: $("#message").val('')
 		})
 
 		function renderMessage(data){
